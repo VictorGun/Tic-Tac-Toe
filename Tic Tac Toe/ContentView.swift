@@ -21,6 +21,8 @@ struct ContentView: View {
                         Text(moves[index])
                             .font(.system(size: 90))
                             .fontWeight(.heavy)
+                        Color.white
+                            .opacity(moves[index] == "" ? 1 : 0)
                     }
                     .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .cornerRadius(30)
@@ -32,6 +34,10 @@ struct ContentView: View {
                         }
                     }
                 }
+                    .rotation3DEffect(
+                        .init(degrees: moves[index] != "" ? 180 : 0),
+                        axis: (x: 0.0, y: 1.0, z: 0.0)
+                    )
             }
         })
     }
