@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var moves = Array(repeating: "", count: 9)
     @State private var xTurn = true
+    @State private var gameOver = false
+    @State private var winMessage = ""
     var body: some View {
         VStack {
             Text("Tic Tac Toe")
@@ -42,7 +44,8 @@ struct ContentView: View {
         })
     }
     .preferredColorScheme(.dark)
-}
+        
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
