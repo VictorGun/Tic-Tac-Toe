@@ -68,9 +68,9 @@ struct ContentView: View {
         checkLine(a: 6, b: 7, c: 8) // bottom row
         checkLine(a: 0, b: 4, c: 8) // diagonal
         checkLine(a: 2, b: 4, c: 6) // diagonal
-        checkLine(a: 0, b: 3, c: 6)
-        checkLine(a: 1, b: 4, c: 7)
-        checkLine(a: 2, b: 5, c: 8)
+        checkLine(a: 0, b: 3, c: 6) // left side
+        checkLine(a: 1, b: 4, c: 7) // middle row
+        checkLine(a: 2, b: 5, c: 8) // right side 
     }
     private func checkLine(a: Int, b: Int, c: Int) {
         if moves[a] != "" && moves[a] == moves[b] && moves[b] == moves[c] {
